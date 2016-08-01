@@ -1,5 +1,5 @@
 /**!
- * lg-autoplay.js | 0.0.1 | July 27th 2016
+ * lg-autoplay.js | 0.0.1 | August 1st 2016
  * http://sachinchoolur.github.io/lg-autoplay.js
  * Copyright (c) 2016 Sachin N; 
  * @license Apache 2.0 
@@ -204,7 +204,9 @@
     Autoplay.prototype.destroy = function () {
 
         this.cancelAuto();
-        this.core.outer.querySelector('.lg-progress-bar').parentNode.removeChild(this.core.outer.querySelector('.lg-progress-bar'));
+        if (this.core.outer.querySelector('.lg-progress-bar')) {
+            this.core.outer.querySelector('.lg-progress-bar').parentNode.removeChild(this.core.outer.querySelector('.lg-progress-bar'));
+        }
     };
 
     window.lgModules.autoplay = Autoplay;
