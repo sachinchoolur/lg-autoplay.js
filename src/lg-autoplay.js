@@ -118,7 +118,7 @@ Autoplay.prototype.progress = function() {
 // Manage autoplay via play/stop buttons
 Autoplay.prototype.controls = function() {
     var _this = this;
-    var _html = '<button aria-label="Toggle autoplay" class="lg-autoplay-button lg-icon"></button>';
+    var _html = '<button type="button" aria-label="Toggle autoplay" class="lg-autoplay-button lg-icon"></button>';
 
     // Append autoplay controls
     _this.core.outer.querySelector(this.core.s.appendAutoplayControlsTo).insertAdjacentHTML('beforeend', _html);
